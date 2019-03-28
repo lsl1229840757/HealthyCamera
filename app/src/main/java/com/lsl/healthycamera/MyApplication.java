@@ -10,6 +10,16 @@ public class MyApplication extends Application {
     private static DaoSession daoSession;
     private static DaoMaster daoMaster;
     private static MyApplication instance;
+    private static String username;
+
+    public static String getUsername() {
+        return username;
+    }
+
+    public static void setUsername(String username) {
+        MyApplication.username = username;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();

@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "密码错误",  Toast.LENGTH_LONG)
                             .show();
                 }else{
+                    MyApplication.setUsername(user.getUsername());
                     Intent intent = new Intent(this, thirdActivity.class);
                     startActivity(intent);
                 }
@@ -42,14 +43,6 @@ public class MainActivity extends AppCompatActivity {
         );
         // 注册登录事件,在第二界面
         register.setOnClickListener(e->{
-//            String username = editTextUsername.getText().toString();
-////            String password = editTextPassword.getText().toString();
-////            if ((!username.equals(""))&&(!password.equals(""))){
-////
-////            }else{
-////                Toast.makeText(MainActivity.this, "请重新输入数据！",  Toast.LENGTH_LONG)
-////                        .show();
-////            }
             Intent intent = new Intent(this, secondActivity.class);
             startActivity(intent);
         });

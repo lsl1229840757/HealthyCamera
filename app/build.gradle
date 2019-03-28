@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.lsl.healthycamera"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -21,7 +21,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     greendao {
-        schemaVersion 1
+        schemaVersion 4
         daoPackage 'com.lsl.healthycamera.entity'
         targetGenDir 'src/main/java'
         //这就是我们上面说到的自定义生成数据库文件的目录了，可以将生成的文件放到我们的java目录中，而不是build中，这样就不用额外的设置资源目录了
@@ -38,4 +38,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'org.greenrobot:greendao:3.0.1'
     implementation 'org.greenrobot:greendao-generator:3.0.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
 }

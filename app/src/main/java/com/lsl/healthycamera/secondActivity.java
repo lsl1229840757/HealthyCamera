@@ -1,5 +1,6 @@
 package com.lsl.healthycamera;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -48,6 +49,9 @@ public class secondActivity extends AppCompatActivity {
                 userDao.insert(user);
                 Toast.makeText(secondActivity.this, "注册成功！",  Toast.LENGTH_LONG)
                         .show();
+                MyApplication.setUsername(user.getUsername());
+                Intent intent = new Intent(this, thirdActivity.class);
+                startActivity(intent);
             }else{
                 Toast.makeText(secondActivity.this, "输入数据格式不对！",  Toast.LENGTH_LONG)
                         .show();
